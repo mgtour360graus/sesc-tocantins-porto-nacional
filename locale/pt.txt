@@ -7,6 +7,11 @@ LinkBehaviour_D3F63DB8_CBA3_6CD8_41C6_2190AB78EEF3.source = https://mgtour360.co
 
 ## Media
 
+### Audio
+audiores_D3E6E39C_C963_F4D8_41CF_5C496262DBA8.url = media/audio_DCD89A5A_C963_345B_41B1_29EF42C263D8_pt.mp3
+
+### Audio Subtitles
+
 ### Title
 panorama_CD86D5C9_C618_D683_41E7_A54B23EE9731.label = Acesso Complexo esportivo
 panorama_CD868D1B_C618_D787_41E1_FEF74262A4C7.label = Acesso Complexo esportivo

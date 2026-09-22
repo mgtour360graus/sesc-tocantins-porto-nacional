@@ -55,6 +55,7 @@
     var referenceWidth = isLandscape ? Math.max(screenWidth, screenHeight) : shortSide;
     var ratio = referenceWidth > 0 ? window.innerWidth / referenceWidth : 1;
     var touchDevice = (navigator.maxTouchPoints || 0) > 0 && shortSide > 0 && shortSide <= 1024;
+    root.classList.toggle('mg360-touch-device', touchDevice);
 
     if (!touchDevice || ratio < 1.35) {
       root.classList.remove('mg360-mobile-viewport-fix');
@@ -151,6 +152,7 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
 @media(max-width:900px){.mg360-dock{padding:4px;border-radius:13px}.mg360-dock-button{height:58px;padding:4px 3px;gap:3px;font-size:11px}.mg360-dock-button svg{width:24px!important;height:24px!important}.mg360-location{left:50%;bottom:calc(80px + var(--mg-safe-bottom))}.mg360-vr-icon{width:30px;height:26px}}\
 @media(max-width:380px){.mg360-dock-button{height:56px;font-size:10px}.mg360-dock-button svg{width:23px!important;height:23px!important}.mg360-share span{font-size:9.5px}.mg360-location{left:50%;bottom:calc(78px + var(--mg-safe-bottom))}.mg360-vr-icon{width:27px;height:23px}}\
 #mg360-ui.mg360-mobile-viewport-fix .mg360-dock{padding:4px;border-radius:13px}#mg360-ui.mg360-mobile-viewport-fix .mg360-dock-button{height:58px;padding:4px 3px;gap:3px;font-size:11px}#mg360-ui.mg360-mobile-viewport-fix .mg360-dock-button svg{width:24px!important;height:24px!important}#mg360-ui.mg360-mobile-viewport-fix .mg360-location,#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-landscape .mg360-location,#mg360-ui.mg360-mobile-viewport-fix.mg360-tablet .mg360-location{left:50%;bottom:calc(80px + var(--mg-safe-bottom))}#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-small .mg360-dock-button{height:56px;font-size:10px}#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-small .mg360-dock-button svg{width:23px!important;height:23px!important}#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-small .mg360-share span{font-size:9.5px}#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-small .mg360-location{left:50%;bottom:calc(78px + var(--mg-safe-bottom))}#mg360-ui.mg360-mobile-viewport-fix.mg360-tablet .mg360-vr{right:24px}\
+@media (orientation:landscape) and (max-height:600px){#mg360-ui.mg360-touch-device .mg360-fullscreen{display:none!important}#mg360-ui.mg360-touch-device .mg360-share{display:flex!important}#mg360-ui.mg360-touch-device .mg360-dock{left:50%;right:auto;bottom:calc(8px + var(--mg-safe-bottom));width:min(620px,calc(100% - 32px));max-width:620px;transform:translateX(-50%)}}\
 @media(prefers-reduced-motion:reduce){#mg360-ui *,#mg360-ui *:before,#mg360-ui *:after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}';
     document.head.appendChild(style);
 
@@ -379,7 +381,7 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
       var shareData = {
         title: document.title || 'Tour virtual Sesc Tocantins',
         text: 'Conheça o tour virtual do Sesc Tocantins.',
-        url: window.location.href
+        url: new URL('./', window.location.href).href
       };
       if (navigator.share) {
         navigator.share(shareData).catch(function (error) {
