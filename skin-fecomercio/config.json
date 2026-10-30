@@ -1,12 +1,12 @@
 {
-  "version": "4.3.2-porto-nacional",
+  "version": "4.3.4-porto-nacional-revisao-2026-10-30",
   "brand": {
     "systemName": "SISTEMA FECOMÉRCIO",
     "tourName": "Sesc Porto Nacional, Tocantins - TOUR 360°",
     "unitName": "Sesc Porto Nacional",
-    "logo": "skin-fecomercio/assets/sesc-1x1-colorido.png",
-    "cornerLogo": "skin-fecomercio/assets/sesc-1x1-colorido.png",
-    "tagline": "Cuidar das pessoas é a nossa essência.",
+    "logo": "skin-fecomercio/assets/marca-sesc-colorida-20261030.png",
+    "cornerLogo": "skin-fecomercio/assets/marca-sesc-branca-20261030.png",
+    "tagline": "",
     "colors": {
       "blue": "#004C99",
       "blueDark": "#003865",
@@ -68,13 +68,17 @@
       "short": "Geral",
       "title": "Conheça a Unidade",
       "eyebrow": "Sesc Porto Nacional · Tocantins",
-      "description": "Comece pelas vistas aéreas e conheça a estrutura da unidade.",
+      "description": "Comece pelas vistas aéreas e pela entrada da unidade.",
       "accent": "#0B78BF",
       "surface": "#DDF2FF",
       "destinations": [
         {
           "label": "Vista aérea geral",
           "index": 0
+        },
+        {
+          "label": "Entrada da unidade",
+          "index": 1
         },
         {
           "label": "Vista aérea da fachada",
@@ -97,47 +101,35 @@
     {
       "id": "entrada",
       "number": "02",
-      "short": "Entrada",
-      "title": "Entrada & Natureza",
+      "short": "Área comum",
+      "title": "Área comum",
       "eyebrow": "Bem-vindo ao Sesc Tocantins",
-      "description": "Percorra a entrada, as áreas verdes e o parquinho.",
+      "description": "Conheça a área comum e o Espaço Recreação da unidade.",
       "accent": "#12AFC2",
       "surface": "#DDFBFC",
       "destinations": [
         {
-          "label": "Entrada",
-          "index": 1
-        },
-        {
-          "label": "Acesso à unidade",
-          "index": 2
-        },
-        {
-          "label": "Espaço Natureza",
+          "label": "Área comum",
           "index": 6
         },
         {
-          "label": "Parquinho",
+          "label": "Espaço Recreação",
           "index": 7
-        },
-        {
-          "label": "Acesso ao Espaço Sesc",
-          "index": 9
         }
       ]
     },
     {
       "id": "sesc",
       "number": "03",
-      "short": "Sesc",
-      "title": "Espaço Sesc & Atendimento",
+      "short": "Hall",
+      "title": "Hall de entrada",
       "eyebrow": "Acolhimento e convivência",
-      "description": "Conheça as áreas internas, os acessos e a secretaria da unidade.",
+      "description": "Conheça o hall de entrada, os espaços de convivência, a secretaria e a Sala Supervisão.",
       "accent": "#E4B400",
       "surface": "#FFF8C7",
       "destinations": [
         {
-          "label": "Espaço Sesc",
+          "label": "Hall de entrada",
           "index": 10
         },
         {
@@ -149,7 +141,7 @@
           "index": 19
         },
         {
-          "label": "Ambiente interno",
+          "label": "Sala Supervisão",
           "index": 41
         }
       ]
@@ -157,15 +149,15 @@
     {
       "id": "cultura",
       "number": "04",
-      "short": "Cultura",
-      "title": "Cultura & Aprendizagem",
+      "short": "Educação",
+      "title": "Educação",
       "eyebrow": "Espaços para aprender",
-      "description": "Explore o Espaço Cultura, as salas e a sala dos professores.",
+      "description": "Explore os ambientes de educação, as salas e a sala dos professores.",
       "accent": "#E57A22",
       "surface": "#FFF0DE",
       "destinations": [
         {
-          "label": "Espaço Cultura",
+          "label": "Educação",
           "index": 21
         },
         {
@@ -196,12 +188,12 @@
       "short": "Esporte",
       "title": "Esporte, Piscinas & Lazer",
       "eyebrow": "Movimento e bem-estar",
-      "description": "Explore piscinas, pilates, quadras, campos e o complexo esportivo.",
+      "description": "Explore piscinas, Sala Multiuso, quadras e campos da unidade.",
       "accent": "#4CA847",
       "surface": "#EAF9E7",
       "destinations": [
         {
-          "label": "Pilates",
+          "label": "Sala Multiuso",
           "index": 45
         },
         {
@@ -209,7 +201,7 @@
           "index": 47
         },
         {
-          "label": "Acesso ao complexo esportivo",
+          "label": "Quadra Poliesportiva",
           "index": 54
         },
         {
@@ -221,7 +213,7 @@
           "index": 60
         },
         {
-          "label": "Quadra",
+          "label": "Quadra Poliesportiva — vista geral",
           "index": 72
         }
       ]
@@ -237,108 +229,108 @@
     {
       "index": 1,
       "name": "Entrada 01",
-      "group": "entrada",
+      "group": "geral",
       "thumb": "media/panorama_CDFC0063_C668_2D87_41E0_95BA6EEB4FE3_t.webp"
     },
     {
       "index": 2,
       "name": "Entrada 02",
-      "group": "entrada",
+      "group": "geral",
       "thumb": "media/panorama_CD84234F_C617_F380_41DB_888D9D460E33_t.webp"
     },
     {
       "index": 3,
       "name": "Entrada 03",
-      "group": "entrada",
+      "group": "geral",
       "thumb": "media/panorama_CD84AC79_C617_D583_41E4_A9BF93764074_t.webp"
     },
     {
       "index": 4,
       "name": "Entrada 04",
-      "group": "entrada",
+      "group": "geral",
       "thumb": "media/panorama_CD8414C9_C617_D683_41CF_7542A8346C05_t.webp"
     },
     {
       "index": 5,
       "name": "Entrada 05",
-      "group": "entrada",
+      "group": "geral",
       "thumb": "media/panorama_CD84FE43_C618_3587_41E5_152F0ED95296_t.webp"
     },
     {
       "index": 6,
-      "name": "Espaço Natureza",
+      "name": "Área comum",
       "group": "entrada",
       "thumb": "media/panorama_CD849ADC_C617_F281_41E0_8441804679D4_t.webp"
     },
     {
       "index": 7,
-      "name": "Parquinho",
+      "name": "Espaço Recreação",
       "group": "entrada",
       "thumb": "media/panorama_CD84227F_C617_D27F_41D6_894D8E613871_t.webp"
     },
     {
       "index": 8,
-      "name": "Parquinho — área externa",
+      "name": "Espaço Recreação — área externa",
       "group": "entrada",
       "thumb": "media/panorama_CD842954_C617_DF81_41D6_CF90506462FD_t.webp"
     },
     {
       "index": 9,
-      "name": "Acesso ao Espaço Sesc",
-      "group": "entrada",
+      "name": "Acesso ao Hall de entrada",
+      "group": "geral",
       "thumb": "media/panorama_CB23395F_C618_3FBF_4155_E541BF282DF8_t.webp"
     },
     {
       "index": 10,
-      "name": "Espaço Sesc 01",
+      "name": "Hall de entrada 01",
       "group": "sesc",
       "thumb": "media/panorama_CDFEFFE7_C618_328F_41D9_5C6551C570B2_t.webp"
     },
     {
       "index": 11,
-      "name": "Espaço Sesc 02",
+      "name": "Hall de entrada 02",
       "group": "sesc",
       "thumb": "media/panorama_CD8BE69A_C618_5281_41CE_ECC7B5CAF85E_t.webp"
     },
     {
       "index": 12,
-      "name": "Espaço Sesc 03",
+      "name": "Hall de entrada 03",
       "group": "sesc",
       "thumb": "media/panorama_CD8BACDA_C618_5681_41C5_05000DFF67E7_t.webp"
     },
     {
       "index": 13,
-      "name": "Espaço Sesc 04",
+      "name": "Hall de entrada 04",
       "group": "sesc",
       "thumb": "media/panorama_CD8822F9_C618_7283_41D7_DA9D5B4247B4_t.webp"
     },
     {
       "index": 14,
-      "name": "Espaço Sesc 05",
+      "name": "Hall de entrada 05",
       "group": "sesc",
       "thumb": "media/panorama_CD8829AE_C618_7E80_41E8_23FB173C4D2A_t.webp"
     },
     {
       "index": 15,
-      "name": "Espaço Sesc 06",
+      "name": "Hall de entrada 06",
       "group": "sesc",
       "thumb": "media/panorama_CD886020_C618_6D81_41DB_2DA421470258_t.webp"
     },
     {
       "index": 16,
-      "name": "Espaço Sesc 07",
+      "name": "Hall de entrada 07",
       "group": "sesc",
       "thumb": "media/panorama_CD882660_C618_5581_41DE_45C85CE182B6_t.webp"
     },
     {
       "index": 17,
-      "name": "Espaço Sesc 08",
+      "name": "Hall de entrada 08",
       "group": "sesc",
       "thumb": "media/panorama_CD884C5D_C618_5583_41AB_F89929F759E5_t.webp"
     },
     {
       "index": 18,
-      "name": "Espaço Sesc 09",
+      "name": "Hall de entrada 09",
       "group": "sesc",
       "thumb": "media/panorama_CD88026A_C618_2D81_41E7_DD368156A218_t.webp"
     },
@@ -356,25 +348,25 @@
     },
     {
       "index": 21,
-      "name": "Espaço Cultura 01",
+      "name": "Educação 01",
       "group": "cultura",
       "thumb": "media/panorama_CD88E4D8_C618_D681_41C1_66C016B05766_t.webp"
     },
     {
       "index": 22,
-      "name": "Espaço Cultura 02",
+      "name": "Educação 02",
       "group": "cultura",
       "thumb": "media/panorama_CD896D5D_C618_D783_41D1_A5A08AF76F3C_t.webp"
     },
     {
       "index": 23,
-      "name": "Espaço Cultura 03",
+      "name": "Educação 03",
       "group": "cultura",
       "thumb": "media/panorama_CD89EF77_C618_F38F_41E0_8693CD21FFF7_t.webp"
     },
     {
       "index": 24,
-      "name": "Espaço Cultura 04",
+      "name": "Educação 04",
       "group": "cultura",
       "thumb": "media/panorama_CD88BBA3_C618_D287_4131_9A3602C2E55E_t.webp"
     },
@@ -476,8 +468,8 @@
     },
     {
       "index": 41,
-      "name": "Ambiente interno",
-      "group": "cultura",
+      "name": "Sala Supervisão",
+      "group": "sesc",
       "thumb": "media/panorama_CD869629_C619_F583_41E1_24AFA1C7B542_t.webp"
     },
     {
@@ -500,13 +492,13 @@
     },
     {
       "index": 45,
-      "name": "Pilates 01",
+      "name": "Sala Multiuso 01",
       "group": "esporte",
       "thumb": "media/panorama_CD87C500_C618_5781_41DF_02736D6C360D_t.webp"
     },
     {
       "index": 46,
-      "name": "Pilates 02",
+      "name": "Sala Multiuso 02",
       "group": "esporte",
       "thumb": "media/panorama_CD87DBB5_C618_5283_4190_EA54C751F7E0_t.webp"
     },
@@ -554,13 +546,13 @@
     },
     {
       "index": 54,
-      "name": "Acesso Complexo esportivo 01",
+      "name": "Acesso à Quadra Poliesportiva 01",
       "group": "esporte",
       "thumb": "media/panorama_CD86D5C9_C618_D683_41E7_A54B23EE9731_t.webp"
     },
     {
       "index": 55,
-      "name": "Acesso Complexo esportivo 02",
+      "name": "Acesso à Quadra Poliesportiva 02",
       "group": "esporte",
       "thumb": "media/panorama_CD868D1B_C618_D787_41E1_FEF74262A4C7_t.webp"
     },
@@ -662,7 +654,7 @@
     },
     {
       "index": 72,
-      "name": "Quadra",
+      "name": "Quadra Poliesportiva",
       "group": "esporte",
       "thumb": "media/panorama_DEFF3C86_CBED_2CA8_41BF_3735B22F2384_t.webp"
     }
