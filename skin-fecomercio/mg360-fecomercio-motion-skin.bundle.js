@@ -154,6 +154,20 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
 #mg360-ui.mg360-mobile-viewport-fix .mg360-dock{padding:4px;border-radius:13px}#mg360-ui.mg360-mobile-viewport-fix .mg360-dock-button{height:58px;padding:4px 3px;gap:3px;font-size:11px}#mg360-ui.mg360-mobile-viewport-fix .mg360-dock-button svg{width:24px!important;height:24px!important}#mg360-ui.mg360-mobile-viewport-fix .mg360-location,#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-landscape .mg360-location,#mg360-ui.mg360-mobile-viewport-fix.mg360-tablet .mg360-location{left:50%;bottom:calc(80px + var(--mg-safe-bottom))}#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-small .mg360-dock-button{height:56px;font-size:10px}#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-small .mg360-dock-button svg{width:23px!important;height:23px!important}#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-small .mg360-share span{font-size:9.5px}#mg360-ui.mg360-mobile-viewport-fix.mg360-phone-small .mg360-location{left:50%;bottom:calc(78px + var(--mg-safe-bottom))}#mg360-ui.mg360-mobile-viewport-fix.mg360-tablet .mg360-vr{right:24px}\
 @media (orientation:landscape) and (max-height:600px){#mg360-ui.mg360-touch-device .mg360-fullscreen{display:none!important}#mg360-ui.mg360-touch-device .mg360-share{display:flex!important}#mg360-ui.mg360-touch-device .mg360-dock{left:50%;right:auto;bottom:calc(8px + var(--mg-safe-bottom));width:min(620px,calc(100% - 32px));max-width:620px;transform:translateX(-50%)}}\
 @media(prefers-reduced-motion:reduce){#mg360-ui *,#mg360-ui *:before,#mg360-ui *:after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}';
+    // Mantém os marcadores na primeira linha e os atalhos livres do dock.
+    style.textContent += `
+#mg360-ui .mg360-destination{align-self:start}
+#mg360-ui .mg360-destination:before{top:calc(7px + .6em - 2.5px)}
+#mg360-ui .mg360-nuclei{display:flex;left:50%;right:auto;bottom:calc(110px + var(--mg-safe-bottom));transform:translateX(-50%);max-width:calc(100% - 32px);gap:22px;padding:10px 16px;border-radius:12px;background:rgba(0,56,101,.65);border:1px solid rgba(255,255,255,.3);overflow-x:auto;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.55) transparent;pointer-events:auto}
+#mg360-ui .mg360-nucleus{font-size:10px;flex-shrink:0;min-height:32px}
+#mg360-ui .mg360-nucleus:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(max-width:900px){
+#mg360-ui .mg360-destination:before{top:calc(9px + .675em - 2.5px)}
+#mg360-ui .mg360-nuclei{bottom:calc(140px + var(--mg-safe-bottom));width:calc(100% - 24px);gap:20px;padding:10px 14px}
+}
+#mg360-ui.mg360-mobile-viewport-fix .mg360-destination:before{top:calc(9px + .675em - 2.5px)}
+#mg360-ui.mg360-mobile-viewport-fix .mg360-nuclei{bottom:calc(140px + var(--mg-safe-bottom));width:calc(100% - 24px);gap:20px;padding:10px 14px}
+`;
     document.head.appendChild(style);
 
     var root = document.createElement('div');
@@ -272,12 +286,14 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
 
     function updateUi(index) {
       var scene = sceneAt(index);
-      var group = groupById(scene.group);
       state.index = scene.index;
       refs.location.textContent = scene.name;
       var buttons = refs.nuclei.querySelectorAll('button');
       for (var i = 0; i < buttons.length; i += 1) {
-        buttons[i].classList.toggle('is-active', buttons[i].getAttribute('data-group') === group.id);
+        var active = buttons[i].getAttribute('data-indices').split(',').indexOf(String(scene.index)) !== -1;
+        buttons[i].classList.toggle('is-active', active);
+        if (active) buttons[i].setAttribute('aria-current', 'location');
+        else buttons[i].removeAttribute('aria-current');
       }
       setTimeout(applyRotation, 220);
     }
@@ -472,8 +488,8 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
     }
 
     function buildNuclei() {
-      refs.nuclei.innerHTML = config.groups.map(function (group) {
-        return '<button class="mg360-nucleus" type="button" data-group="' + escapeHtml(group.id) + '" data-index="' + group.destinations[0].index + '">' + escapeHtml(group.short) + '</button>';
+      refs.nuclei.innerHTML = config.navigation.map(function (item) {
+        return '<button class="mg360-nucleus" type="button" data-indices="' + item.indices.join(',') + '" data-index="' + item.index + '">' + escapeHtml(item.label) + '</button>';
       }).join('');
       var buttons = refs.nuclei.querySelectorAll('button');
       for (var i = 0; i < buttons.length; i += 1) {
