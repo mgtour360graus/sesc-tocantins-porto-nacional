@@ -1,11 +1,11 @@
 {
-  "version": "4.3.5-porto-nacional-complementar-2026-10-30",
+  "version": "5.0-porto-revisao-cliente-20261109-r1",
   "brand": {
     "systemName": "SISTEMA FECOMÉRCIO",
-    "tourName": "Sesc Porto Nacional, Tocantins - TOUR 360°",
+    "tourName": "Sesc Porto Nacional - TOUR 360°",
     "unitName": "Sesc Porto Nacional",
-    "logo": "skin-fecomercio/assets/marca-sesc-colorida-20261030.png",
-    "cornerLogo": "skin-fecomercio/assets/marca-sesc-branca-20261030.png",
+    "logo": "skin-fecomercio/assets/marca-sesc-colorida-20261109.png",
+    "cornerLogo": "skin-fecomercio/assets/marca-sesc-branca-20261109.png",
     "tagline": "",
     "colors": {
       "blue": "#004C99",
@@ -66,7 +66,7 @@
       "id": "geral",
       "number": "01",
       "short": "Geral",
-      "title": "Conheça a Unidade",
+      "title": "Geral",
       "eyebrow": "Sesc Porto Nacional · Tocantins",
       "description": "Comece pelas vistas aéreas e pela entrada da unidade.",
       "accent": "#0B78BF",
@@ -75,10 +75,6 @@
         {
           "label": "Vista aérea geral",
           "index": 0
-        },
-        {
-          "label": "Entrada da unidade",
-          "index": 1
         },
         {
           "label": "Vista aérea da fachada",
@@ -101,33 +97,17 @@
     {
       "id": "entrada",
       "number": "02",
-      "short": "Área comum",
-      "title": "Área comum",
-      "eyebrow": "Bem-vindo ao Sesc Tocantins",
-      "description": "Conheça a área comum e o Espaço Recreação da unidade.",
-      "accent": "#12AFC2",
-      "surface": "#DDFBFC",
-      "destinations": [
-        {
-          "label": "Área comum",
-          "index": 6
-        },
-        {
-          "label": "Espaço Recreação",
-          "index": 7
-        }
-      ]
-    },
-    {
-      "id": "sesc",
-      "number": "03",
-      "short": "Hall",
-      "title": "Hall de entrada",
+      "short": "Entrada",
+      "title": "Entrada",
       "eyebrow": "Acolhimento e convivência",
-      "description": "Conheça o hall de entrada, os espaços de convivência, a secretaria e a Sala Supervisão.",
+      "description": "Entrada, hall, circulação e atendimento da unidade.",
       "accent": "#E4B400",
       "surface": "#FFF8C7",
       "destinations": [
+        {
+          "label": "Entrada 01",
+          "index": 1
+        },
         {
           "label": "Hall de entrada",
           "index": 10
@@ -147,8 +127,8 @@
       ]
     },
     {
-      "id": "cultura",
-      "number": "04",
+      "id": "educacao",
+      "number": "03",
       "short": "Educação",
       "title": "Educação",
       "eyebrow": "Espaços para aprender",
@@ -184,9 +164,9 @@
     },
     {
       "id": "esporte",
-      "number": "05",
+      "number": "04",
       "short": "Esporte",
-      "title": "Esporte, Piscinas e Lazer",
+      "title": "Esporte",
       "eyebrow": "Movimento e bem-estar",
       "description": "Explore piscinas, Sala Multiuso, quadras e campos da unidade.",
       "accent": "#4CA847",
@@ -217,6 +197,26 @@
           "index": 72
         }
       ]
+    },
+    {
+      "id": "area-comum",
+      "number": "05",
+      "short": "Área Comum",
+      "title": "Área Comum",
+      "eyebrow": "Bem-vindo ao Sesc Tocantins",
+      "description": "Áreas comuns e espaços de recreação da unidade.",
+      "accent": "#12AFC2",
+      "surface": "#DDFBFC",
+      "destinations": [
+        {
+          "label": "Área comum",
+          "index": 6
+        },
+        {
+          "label": "Espaço Recreação",
+          "index": 7
+        }
+      ]
     }
   ],
   "scenes": [
@@ -229,265 +229,265 @@
     {
       "index": 1,
       "name": "Entrada 01",
-      "group": "geral",
+      "group": "entrada",
       "thumb": "media/panorama_CDFC0063_C668_2D87_41E0_95BA6EEB4FE3_t.webp"
     },
     {
       "index": 2,
       "name": "Entrada 02",
-      "group": "geral",
+      "group": "entrada",
       "thumb": "media/panorama_CD84234F_C617_F380_41DB_888D9D460E33_t.webp"
     },
     {
       "index": 3,
       "name": "Entrada 03",
-      "group": "geral",
+      "group": "entrada",
       "thumb": "media/panorama_CD84AC79_C617_D583_41E4_A9BF93764074_t.webp"
     },
     {
       "index": 4,
       "name": "Entrada 04",
-      "group": "geral",
+      "group": "entrada",
       "thumb": "media/panorama_CD8414C9_C617_D683_41CF_7542A8346C05_t.webp"
     },
     {
       "index": 5,
       "name": "Entrada 05",
-      "group": "geral",
+      "group": "entrada",
       "thumb": "media/panorama_CD84FE43_C618_3587_41E5_152F0ED95296_t.webp"
     },
     {
       "index": 6,
       "name": "Área comum",
-      "group": "entrada",
+      "group": "area-comum",
       "thumb": "media/panorama_CD849ADC_C617_F281_41E0_8441804679D4_t.webp"
     },
     {
       "index": 7,
       "name": "Espaço Recreação",
-      "group": "entrada",
+      "group": "area-comum",
       "thumb": "media/panorama_CD84227F_C617_D27F_41D6_894D8E613871_t.webp"
     },
     {
       "index": 8,
       "name": "Espaço Recreação — área externa",
-      "group": "entrada",
+      "group": "area-comum",
       "thumb": "media/panorama_CD842954_C617_DF81_41D6_CF90506462FD_t.webp"
     },
     {
       "index": 9,
       "name": "Acesso ao Hall de entrada",
-      "group": "geral",
+      "group": "entrada",
       "thumb": "media/panorama_CB23395F_C618_3FBF_4155_E541BF282DF8_t.webp"
     },
     {
       "index": 10,
       "name": "Hall de entrada 01",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CDFEFFE7_C618_328F_41D9_5C6551C570B2_t.webp"
     },
     {
       "index": 11,
       "name": "Hall de entrada 02",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD8BE69A_C618_5281_41CE_ECC7B5CAF85E_t.webp"
     },
     {
       "index": 12,
       "name": "Hall de entrada 03",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD8BACDA_C618_5681_41C5_05000DFF67E7_t.webp"
     },
     {
       "index": 13,
       "name": "Hall de entrada 04",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD8822F9_C618_7283_41D7_DA9D5B4247B4_t.webp"
     },
     {
       "index": 14,
       "name": "Hall de entrada 05",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD8829AE_C618_7E80_41E8_23FB173C4D2A_t.webp"
     },
     {
       "index": 15,
       "name": "Hall de entrada 06",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD886020_C618_6D81_41DB_2DA421470258_t.webp"
     },
     {
       "index": 16,
       "name": "Hall de entrada 07",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD882660_C618_5581_41DE_45C85CE182B6_t.webp"
     },
     {
       "index": 17,
       "name": "Hall de entrada 08",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD884C5D_C618_5583_41AB_F89929F759E5_t.webp"
     },
     {
       "index": 18,
       "name": "Hall de entrada 09",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD88026A_C618_2D81_41E7_DD368156A218_t.webp"
     },
     {
       "index": 19,
       "name": "Secretaria 01",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD88D899_C618_3E83_41C2_F0AD2D80251C_t.webp"
     },
     {
       "index": 20,
       "name": "Secretaria 02",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD882EA7_C618_328F_41E1_A2871C7DBFB5_t.webp"
     },
     {
       "index": 21,
       "name": "Educação 01",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD88E4D8_C618_D681_41C1_66C016B05766_t.webp"
     },
     {
       "index": 22,
       "name": "Educação 02",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD896D5D_C618_D783_41D1_A5A08AF76F3C_t.webp"
     },
     {
       "index": 23,
       "name": "Educação 03",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD89EF77_C618_F38F_41E0_8693CD21FFF7_t.webp"
     },
     {
       "index": 24,
       "name": "Educação 04",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD88BBA3_C618_D287_4131_9A3602C2E55E_t.webp"
     },
     {
       "index": 25,
       "name": "Sala 4 01",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD8871E4_C618_2E81_41E2_485124615E43_t.webp"
     },
     {
       "index": 26,
       "name": "Sala 4 02",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD886802_C618_3D81_41C4_2A03CF671B13_t.webp"
     },
     {
       "index": 27,
       "name": "Sala 4 03",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD89BE44_C618_3581_41E7_52B2559A5034_t.webp"
     },
     {
       "index": 28,
       "name": "Sala 4 04",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD898471_C618_5583_41E0_3406602EFF8D_t.webp"
     },
     {
       "index": 29,
       "name": "Sala 3 01",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD891A7F_C618_527F_41E2_0A4F502D25C4_t.webp"
     },
     {
       "index": 30,
       "name": "Sala 3 02",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD89C0F3_C618_6E87_41BD_358612659A19_t.webp"
     },
     {
       "index": 31,
       "name": "Sala 3 03",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD896765_C618_7380_41BE_39C850244A24_t.webp"
     },
     {
       "index": 32,
       "name": "Sala 3 04",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD89DD82_C618_7686_41BB_65A1B9ABBA3C_t.webp"
     },
     {
       "index": 33,
       "name": "Sala 2 01",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD8973B1_C618_5283_41D1_4F28DEB3BBE7_t.webp"
     },
     {
       "index": 34,
       "name": "Sala 2 02",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD8919D1_C618_5E82_41E8_83A50860F0DF_t.webp"
     },
     {
       "index": 35,
       "name": "Sala 2 03",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD893002_C618_2D81_41B3_663DB4579B9E_t.webp"
     },
     {
       "index": 36,
       "name": "Sala 2 04",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD89160F_C618_359F_41E7_02E68A4E14E4_t.webp"
     },
     {
       "index": 37,
       "name": "Sala 1 01",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD86FC4F_C618_359F_41E5_15BDF86E837B_t.webp"
     },
     {
       "index": 38,
       "name": "Sala 1 02",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD86E27E_C618_2D81_41DC_DFA03D347EAF_t.webp"
     },
     {
       "index": 39,
       "name": "Sala 1 03",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD8658AD_C619_DE83_41BD_856CDA9010F4_t.webp"
     },
     {
       "index": 40,
       "name": "Sala 1 04",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD86DF20_C619_D381_41C8_0B7B4EA7CD04_t.webp"
     },
     {
       "index": 41,
       "name": "Sala Supervisão",
-      "group": "sesc",
+      "group": "entrada",
       "thumb": "media/panorama_CD869629_C619_F583_41E1_24AFA1C7B542_t.webp"
     },
     {
       "index": 42,
       "name": "Sala dos Professores 01",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD868CCE_C619_F69E_41B2_2E8D1789FD34_t.webp"
     },
     {
       "index": 43,
       "name": "Sala dos Professores 02",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD86099D_C619_DE83_41DA_AAFF8FA516DB_t.webp"
     },
     {
       "index": 44,
       "name": "Sala dos Professores 03",
-      "group": "cultura",
+      "group": "educacao",
       "thumb": "media/panorama_CD87DA1A_C618_3D80_41D5_FCC27B9C231E_t.webp"
     },
     {
@@ -661,6 +661,7 @@
   ],
   "navigation": [
     {
+      "id": "geral",
       "label": "Geral",
       "index": 0,
       "indices": [
@@ -672,6 +673,7 @@
       ]
     },
     {
+      "id": "entrada",
       "label": "Entrada",
       "index": 1,
       "indices": [
@@ -679,23 +681,8 @@
         2,
         3,
         4,
-        5
-      ]
-    },
-    {
-      "label": "Área comum",
-      "index": 6,
-      "indices": [
-        6,
-        7,
-        8,
-        9
-      ]
-    },
-    {
-      "label": "Hall",
-      "index": 10,
-      "indices": [
+        5,
+        9,
         10,
         11,
         12,
@@ -706,10 +693,12 @@
         17,
         18,
         19,
-        20
+        20,
+        41
       ]
     },
     {
+      "id": "educacao",
       "label": "Educação",
       "index": 21,
       "indices": [
@@ -733,13 +722,13 @@
         38,
         39,
         40,
-        41,
         42,
         43,
         44
       ]
     },
     {
+      "id": "esporte",
       "label": "Esporte",
       "index": 45,
       "indices": [
@@ -767,6 +756,16 @@
         66,
         67,
         72
+      ]
+    },
+    {
+      "id": "area-comum",
+      "label": "Área Comum",
+      "index": 6,
+      "indices": [
+        6,
+        7,
+        8
       ]
     }
   ]
